@@ -1,10 +1,34 @@
+bindkey '^a' beginning-of-line
+bindkey '^b' backward-char
+bindkey '^d' delete-char-or-list
+bindkey '^e' end-of-line
+bindkey '^f' forward-char
+bindkey '^g' send-break
+bindkey '^h' backward-delete-char
+bindkey '^i' expand-or-complete
+bindkey '^l' vi-forward-char
+bindkey '^n' down-line-or-history
+bindkey '^p' up-line-or-history
+bindkey '^r' history-incremental-search-backward
+bindkey '^s' history-incremental-search-forward
+
 # alias
 alias ls='ls -G'
 alias ll='ls -al'
 # 3秒以上かかった処理は詳細表示
 REPORTTIME=3
+
 # ヒストリの設定
-HISTFILE=~/.zhistory
+export HISTFILE=~/.zhistory
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+# # 履歴ファイルに保存される履歴の件数
+export SAVEHIST=1000000
+# 重複を記録しない
+setopt hist_ignore_dups
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
+
 #結合文字
 setopt COMBINING_CHARS
 #PROMPT=$'%{\e[1;32m%}%m{%n}%{\e[m%}%# '
