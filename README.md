@@ -2,3 +2,5 @@
 curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5  
 export PATH=/usr/local/php5/bin:$PATH  
 curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6  
+sudo vim /etc/paths  
+> 1 /usr/local/php5/bin  
